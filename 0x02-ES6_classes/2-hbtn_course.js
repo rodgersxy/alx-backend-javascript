@@ -1,3 +1,4 @@
+/*Constructor attributes:name,length,students*/
 export default class HolbertonCourse {
   constructor(name, length, students) {
     if (typeof name !== 'string') {
