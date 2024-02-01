@@ -17,6 +17,7 @@ function calculateNumber (type, a, b) {
   } else if (type === 'SUBTRACT') {
     return numberA - numberB
   } else if (type === 'DIVIDE') {
+    if (numberB === 0) return 'Error'
     return numberA / numberB
   } else {
     throw TypeError
