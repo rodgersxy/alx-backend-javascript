@@ -6,19 +6,17 @@
  * When type is DIVIDE, round the two numbers, and divide a by b
  */
 
-function calculateNumber (type, a, b) {
-  const numberA = Math.round(a)
-  const numberB = Math.round(b)
-
+const calculateNumber = (type, a, b) => {
   if (type === 'SUM') {
-    return numberA + numberB
-  } else if (type === 'SUBTRACT') {
-    return numberA - numberB
-  } else if (type === 'DIVIDE') {
-    if (numberB === 0) return 'Error'
-    return numberA / numberB
-  } else {
-    throw TypeError
+    return (Math.round(a) + Math.round(b))
+  }
+  if (type === 'SUBTRACT') {
+    return (Math.round(a) - Math.round(b))
+  }
+  if (type === 'DIVIDE') {
+    if (Math.round(b) !== 0) {
+      return (Math.round(a) / Math.round(b))
+    } else return ('Error')
   }
 }
 
